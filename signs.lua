@@ -132,6 +132,9 @@ local get_library_formspec = function(format)
             ctr = ctr + 1
         end
     end
+    if ctr == 0 then
+        return "textarea[0,0;4,5;;;There are no registered library images for this sign.]"
+    end
     return table.concat(t)
 end
 
