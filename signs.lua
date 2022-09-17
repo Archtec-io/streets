@@ -330,7 +330,7 @@ streets.register_sign_image("priority_over_oncoming", {
     do_not_color = true,
 })
 
-streets.register_sign_image("narrow", {
+streets.register_sign_image("priority", {
     image = "[combine:32x32:10,8=streets_sign_intersection_priority.png",
     image_1to1 = "[combine:32x32:10,8=streets_sign_intersection_priority.png",
     image_diamond = "[combine:32x32:10,8=streets_sign_intersection_priority.png",
