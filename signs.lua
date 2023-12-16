@@ -638,6 +638,7 @@ streets.register_sign = function(name, def)
         minetest.register_node(base_name.."_polemount", polemount_def)
     end
 
+    def.use_texture_alpha = "clip"
     def.paramtype = "light"
     def.paramtype2 = "colorfacedir"
     def.drawtype = "mesh"

@@ -4,6 +4,7 @@ minetest.register_node("streets:roadwork_barrier_tape", {
     drawtype = "nodebox",
     tiles = { "streets_roadwork_barrier_tape.png" },
     sunlight_propagates = true,
+    use_texture_alpha = "clip",
     groups = { choppy = 3, dig_immediate = 3, level = 1, wall = 1 },
     node_box = {
         type = "connected",
@@ -46,6 +47,7 @@ minetest.register_node("streets:roadwork_traffic_cone", {
         ""
     },
     sunlight_propagates = true,
+    use_texture_alpha = "clip",
     groups = { snappy = 3, level = 1 },
     selection_box = {
         type = "fixed",
@@ -94,6 +96,7 @@ minetest.register_node("streets:roadwork_traffic_cone_with_light", {
         ""
     },
     sunlight_propagates = true,
+    use_texture_alpha = "clip",
     groups = { snappy = 3, level = 1 },
     selection_box = {
         type = "fixed",
@@ -172,6 +175,7 @@ minetest.register_node("streets:roadwork_traffic_fence", {
         "streets_roadwork_fence.png",
     },
     sunlight_propagates = true,
+    use_texture_alpha = "clip",
     groups = { snappy = 3, level = 1 },
     selection_box = {
         type = "fixed",
@@ -206,6 +210,7 @@ for name, desc in pairs({
             "streets_roadwork_fence_" .. name .. ".png"
         },
         sunlight_propagates = true,
+        use_texture_alpha = "clip",
         groups = { snappy = 3, level = 1 },
         selection_box = {
             type = "fixed",
