@@ -701,8 +701,7 @@ streets.register_sign = function(name, def)
             if (param2 >= 0 and param2 <= 4)  and exact_point then
                 local component = (param2 == 0 or param2 == 2) and "z" or "x"
                 behind_pos[component] = behind_pos[component] + (param2 <= 1 and 1 or -1)
-                local is_pole = string.sub(node.name, #node.name - 9, #node.name)
-                if math.abs(pos[component] - exact_point[component]) >= .75 and is_pole ~= "_polemount" then
+                if math.abs(pos[component] - exact_point[component]) >= .75 and minetest.registered_nodes[node.name .. "_polemount"] then
                     node.name = node.name .. "_polemount"
                     minetest.set_node(pos, node)
                 end
