@@ -174,7 +174,7 @@ local set_formspec = function(pos)
         "box[.25,5;2,.01;#fff]",
         "label[2.25,5; OR ]",
         "box[2.75,5;2,.01;#fff]",
-        "field[.25,5.5;4.5,.75;image;Image:;"..minetest.formspec_escape(image).."]",
+        "field[.25,5.5;4.5,.75;image;Image: (read only);"..minetest.formspec_escape(image).."]",
         "field_close_on_enter[image;false]",
         "button[.25,6.5;1.75,.75;image_library;Library]",
         "button[3,6.5;1.75,.75;save_image;Save]",
@@ -190,7 +190,7 @@ local on_receive_fields = function(pos, formname, fields, sender)
             meta:set_string("text", fields.text)
             meta:set_string("use", "text")
         elseif fields.save_image then
-            meta:set_string("image", fields.image)
+            -- meta:set_string("image", fields.image)
             meta:set_string("use", "image")
         elseif fields.image_library then
             meta:set_string("show", "image_library")
